@@ -33,9 +33,9 @@ export filename=$(awk -v TASK_ID=$SLURM_ARRAY_TASK_ID \
 
 echo "==> Itererating over all row values <=="
 
-len=${#arr[@]}
+len=${#ARR[@]}
 for (( i=0; i<$len; i++ )); do
-	echo "${arr[$i]}"
+	echo "${ARR[$i]}"
 done
 
 echo "==> Just a single caputer value <=="
