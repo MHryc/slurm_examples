@@ -19,7 +19,7 @@ export SLURM_CPUS_PER_TASK
 CONFIG="${SLURM_SUBMIT_DIR}/config.conf"
 
 # we can read whole row from config as an array
-export readarray -t ARR < <(awk -v \
+readarray -t ARR < <(awk -v \
 	TASK_ID=$SLURM_ARRAY_TASK_ID \
 	'$1 == TASK_ID' $CONFIG)
 
