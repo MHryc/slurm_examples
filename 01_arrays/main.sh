@@ -31,13 +31,13 @@ export filename=$(awk -v TASK_ID=$SLURM_ARRAY_TASK_ID \
 
 # print values from each column to std Out
 
-echo "==> Itererating over all row values <=="
+echo "==> Itererating over all values in a row <=="
 
 len=${#ARR[@]}
 for (( i=0; i<$len; i++ )); do
 	echo "${ARR[$i]}"
 done
 
-echo "==> Just a single caputer value <=="
+echo "==> Just a single caputed value <=="
 
 echo "Filename is $filename"
